@@ -13,7 +13,8 @@ const http = require("http");
     will executed for any coming request
 */
 const server = http.createServer((req, res) => {
-  console.log(req);
+  // getting some request information
+  console.log(req.url, req.method, req.headers);
 });
 
 /*
@@ -22,5 +23,3 @@ const server = http.createServer((req, res) => {
     the return of the function inside .createServer()
 */
 server.listen(4000);
-
-console.log("Server running dawg !");

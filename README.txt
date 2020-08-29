@@ -36,6 +36,11 @@ II. Core Concepts:
         createServer() doesn't return an exit code so
         the event loop keeps running
 
+        If you want to exit of the event loop, 
+        you can use: process.exit();
+        This will stop your server. Typically
+        you don't want to stop your server ever
+
     3. Using Node Core Modules: 
 
     4. Basic of Working with Requests & Responses

@@ -21,4 +21,6 @@ const server = http.createServer((req, res) => {
     Now when user go to localhost:3000 we'll see
     the return of the function inside .createServer()
 */
-server.listen(3000);
+server.listen(4000);
+
+console.log("Server running dawg !");

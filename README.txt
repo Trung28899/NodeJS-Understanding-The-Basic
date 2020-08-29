@@ -26,10 +26,24 @@ II. Core Concepts:
 
              - HTTPS (HTTP + Secure): is HTTP combined with 
              Data Encryption (during Transmission) 
+    
+    2. Node.JS LifeCycle: 
+        Run $node app.j > start script > Parse Code, 
+        Register Variables & Functions > Event Loop
 
+        Event loop keeps running as long as there is
+        an event listener registered. Function inside
+        createServer() doesn't return an exit code so
+        the event loop keeps running
 
+    3. Using Node Core Modules: 
+
+    4. Basic of Working with Requests & Responses
+
+    5. Asynchronous Code & The Event Loop: 
 
 III. How To Use This Module: 
     1. Creating a Node.js Server:
-        - See code in 2nd commit to see how to 
+        - See code in 3rd commit to see how to 
         create NodeJs server
+        - 3rd Commit ends at video 27th

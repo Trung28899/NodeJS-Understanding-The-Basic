@@ -52,3 +52,9 @@ III. How To Use This Module:
         - See code in 3rd commit to see how to 
         create NodeJs server
         - 3rd Commit ends at video 27th
+    
+    2. Getting Request and Response Information: 
+        - Commit 4th to see request info, 
+        Commit 5th to see response info
+        - On 5th Commit, IF YOU RUN THE SERVER, AND RELOAD localhost:4000
+        YOU WILL SEE THE RESPONSE PAGE. 

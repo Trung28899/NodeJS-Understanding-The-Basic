@@ -58,3 +58,13 @@ III. How To Use This Module:
         Commit 5th to see response info
         - On 5th Commit, IF YOU RUN THE SERVER, AND RELOAD localhost:4000
         YOU WILL SEE THE RESPONSE PAGE. 
+
+    3. Routing and Redirecting Requests: 
+        - 6th Commit to see the code
+        - Code explaination: 
+            if user go to localhost:4000, showing the form w button
+            if user click this button > direct to message with POST request
+
+            user go to localhost:4000/message, if request was GET > show
+            the default code 
+            if request was POST, redirect to localhost:4000/

@@ -41,6 +41,10 @@ II. Core Concepts:
         This will stop your server. Typically
         you don't want to stop your server ever
 
+    3. Requests, Streams and Buffer in NodeJS:
+        - Search for the same thing in this documentation:
+        https://docs.google.com/document/d/1fW7WSCaD98QZvdSwpHJEw5zn_TnahGeR5L_FRu__XnM/edit?usp=sharing
+
     3. Using Node Core Modules: 
 
     4. Basic of Working with Requests & Responses
@@ -68,3 +72,15 @@ III. How To Use This Module:
             user go to localhost:4000/message, if request was GET > show
             the default code 
             if request was POST, redirect to localhost:4000/
+    
+    4. Getting Data from Requests: 
+        - See 3. Requests, Streams and Buffer in NodeJS above first
+        to understand some basic concepts
+
+        - 7th Commit to see the code
+        - Code explaination: 
+            user go to localhost:4000, type something in input box, 
+            send message > The content will be written in 
+            message.txt file in the server
+        - See req.on('data') and req.on('end') to understand how we 
+        do it

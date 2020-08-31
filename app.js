@@ -1,23 +1,9 @@
-/* 
-    This is how you import in NodeJS
-    this will import global module called 'http'
-
-    If we have a local file called http.js, we can
-    do require(./http)
-*/
+// importing packages in NodeJS
 const http = require("http");
 // fs allow use to work with file system
 const fileSystem = require("fs");
 
-/*
-    This is how to create a server, 
-    function passed inside createServer() 
-    will executed for any coming request
-*/
 const server = http.createServer((req, res) => {
-  // getting some request information
-  console.log(req.url, req.method, req.headers);
-
   const url = req.url;
   const method = req.method;
 
@@ -34,7 +20,35 @@ const server = http.createServer((req, res) => {
   }
 
   if (url === "/message" && method === "POST") {
-    fileSystem.writeFileSync("message.txt", "DUMMY dawg");
+    const body = [];
+    /*
+        Registering an event listener
+        in this case the data event.
+
+        This data event will be fired whenever a 
+        new body parts of data is ready to 
+        be read
+    */
+    req.on("data", (chunk) => {
+      console.log(chunk);
+      body.push(chunk);
+    });
+
+    /*
+        'end' is when there is enough body parts to form a buffer
+        to work with
+
+
+        This function will write the data send to message.txt
+    */
+    req.on("end", () => {
+      const parsedBody = Buffer.concat(body).toString();
+
+      // See parsedBody to understand this
+      const message = parsedBody.split("=")[1];
+      fileSystem.writeFileSync("message.txt", message);
+    });
+
     // 302 means redirection
     res.statusCode = 302;
     // set Location of Header to /
@@ -53,9 +67,5 @@ const server = http.createServer((req, res) => {
   res.end();
 });
 
-/*
-    Listen for any incoming requests in port 3000
-    Now when user go to localhost:3000 we'll see
-    the return of the function inside .createServer()
-*/
+// listening for any incoming requests in port 4000
 server.listen(4000);

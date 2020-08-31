@@ -45,7 +45,15 @@ II. Core Concepts:
         - Search for the same thing in this documentation:
         https://docs.google.com/document/d/1fW7WSCaD98QZvdSwpHJEw5zn_TnahGeR5L_FRu__XnM/edit?usp=sharing
 
-    3. Using Node Core Modules: 
+    4. Event Driven Code execution: 
+        - There is a common pattern in NodeJS that a function is passed
+        within a function call then any code in the function call will
+        only be registered to run as Asynchronous code
+        - While waiting for the async code to run, the server go on
+        to the next lines of code to execute. This is the idea of 
+        Event Driven Code Execution
+        - The function within req.on() in 8th commit is an example for
+        this concept 
 
     4. Basic of Working with Requests & Responses
 
@@ -84,3 +92,7 @@ III. How To Use This Module:
             message.txt file in the server
         - See req.on('data') and req.on('end') to understand how we 
         do it
+    
+    5. Event Driven Code Execution: 
+        - See code in Commit 8th
+        - To understand it, see the part 4 in the core concepts section

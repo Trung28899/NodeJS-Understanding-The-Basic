@@ -39,21 +39,22 @@ const server = http.createServer((req, res) => {
         to work with
 
 
-        This function will write the data send to message.txt
+        If we don't return this function, we'll see the /message page
+        loaded when we send any message > this is the case of 
+        Event Driven Code Execution
     */
-    req.on("end", () => {
+    return req.on("end", () => {
       const parsedBody = Buffer.concat(body).toString();
 
       // See parsedBody to understand this
       const message = parsedBody.split("=")[1];
       fileSystem.writeFileSync("message.txt", message);
+      // 302 means redirection
+      res.statusCode = 302;
+      // set Location of Header to /
+      res.setHeader("Location", "/");
+      return res.end();
     });
-
-    // 302 means redirection
-    res.statusCode = 302;
-    // set Location of Header to /
-    res.setHeader("Location", "/");
-    return res.end();
   }
   // Setting the header of the response
   res.setHeader("Content-Type", "text/html");

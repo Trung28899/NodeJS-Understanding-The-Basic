@@ -3,7 +3,9 @@ I. Tools used:
 II. Core Concepts: 
     1. How Does The Web Work ? 
         
-        a. Client Server Cycle
+        a. Client Server Cycle: 
+            Client => Request => Server => Response => Client
+
             - User (Client) will enter an URL > URL will get to 
             the DOMAIN LOOKUP to REQUEST a RESPONSE from 
             SERVER: 
@@ -105,3 +107,27 @@ III. How To Use This Module:
     5. Event Driven Code Execution: 
         - See code in Commit 8th
         - To understand it, see the part 4 in the core concepts section
+
+    6. Non-blocking vs Blocking Code: 
+        - See 9th commit and part 5 in the core concepts section
+
+    7. How to import and export files in NodeJs:
+        - See 10th commit, routes.js for exporting and 
+        app.js for importing
+        - See 9th Commit for full comments of explanation of codes
+        - See this video for summing up: 
+
+        https://www.udemy.com/course/nodejs-the-complete-guide/learn/lecture/11561942#content
+
+
+IV. Tasks got left to do on this module: 
+    1. Understand how Javascript works behind the scene
+        (Javascript with Browser): 
+    
+    Video 113 Mastering the coding interview
+    https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/learn/lecture/12334642#content
+    2. Understand how NodeJS work behind the scene: 
+        (Javascript server)
+
+    Video 37 NodeJS - The Complete Guide
+    https://www.udemy.com/course/nodejs-the-complete-guide/learn/lecture/11561908#content

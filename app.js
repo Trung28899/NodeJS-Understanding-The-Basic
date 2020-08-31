@@ -48,12 +48,13 @@ const server = http.createServer((req, res) => {
 
       // See parsedBody to understand this
       const message = parsedBody.split("=")[1];
-      fileSystem.writeFileSync("message.txt", message);
-      // 302 means redirection
-      res.statusCode = 302;
-      // set Location of Header to /
-      res.setHeader("Location", "/");
-      return res.end();
+      fileSystem.writeFile("message.txt", message, (error) => {
+        // 302 means redirection
+        res.statusCode = 302;
+        // set Location of Header to /
+        res.setHeader("Location", "/");
+        return res.end();
+      });
     });
   }
   // Setting the header of the response

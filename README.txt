@@ -55,9 +55,18 @@ II. Core Concepts:
         - The function within req.on() in 8th commit is an example for
         this concept 
 
-    4. Basic of Working with Requests & Responses
+    5. Blocking Code and Non-Blocking Code: 
+        - Blocking code is synchrounous code that has to wait 
+        for one line of operation to finish until we can move on
+        to next operations
+        - The function fileSystem.writeFileSync() in 8th Commit 
+        is an example of blocking code. We have to wait for it 
+        to complete so that we can run the following lines
 
-    5. Asynchronous Code & The Event Loop: 
+        - Non-Blocking code is Asynchronous code that run in the 
+        background while other operations are running
+        - The function fileSystem.writeFile() in 9th Commit 
+        is an example of blocking code
 
 III. How To Use This Module: 
     1. Creating a Node.js Server:
